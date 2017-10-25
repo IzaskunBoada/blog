@@ -1,14 +1,4 @@
-/* #####################################################################
-   #
-   #   Project       : Modal Login with jQuery Effects
-   #   Author        : Rodrigo Amarante (rodrigockamarante)
-   #   Version       : 1.0
-   #   Created       : 07/29/2015
-   #   Last Change   : 08/04/2015
-   #
-   ##################################################################### */
-   
-$(function() {
+ $(function() {
     
     var $formLogin = $('#login-form');
     var $formLost = $('#lost-form');
@@ -19,6 +9,7 @@ $(function() {
     var $msgShowTime = 2000;
 
     $("form").submit(function () {
+
         switch(this.id) {
             case "login-form":
                 var $lg_username=$('#login_username').val();
