@@ -1,3 +1,24 @@
+<?php 
+    include("funciones.php");
+    $opc = 1;
+    if(isset($_POST['enviar'])){    
+        $usuario = $_POST['usuario'];
+        $password = $_POST['password'];
+        $opc = sacarUsuario($usuario,$password);
+        if($opc == 1)
+        {
+            session_start();
+            $_SESSION['usuario'] = $opc;
+            header('Location: admin.php');
+            exit();
+        }
+    }
+    if(isset($_POST['salir']))
+    {
+        header('Location: index.php');
+        exit();
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,22 +29,6 @@
         <script src="js/md5.js" type="text/javascript"></script>
     </head>
     <body>
-    <?php
-        include("funciones.php");
-        $opc = 1;
-        if(isset($_POST['enviar'])){
-            if(isset($_POST['usuario']) == null){
-                echo "es nulo";
-            }
-            $usuario = $_POST['usuario'];
-            $password = $_POST['password'];
-            $opc = sacarUsuario($usuario,$password);
-            session_start();
-            $_SESSION['usuario'] = $opc;
-            header('Location: admin.php');
-            exit();
-        }
-        ?>
         <center>
             <div class="container">
                 <div>
@@ -55,6 +60,7 @@
                                         </label>
                                     </div>
                                     <input class="btn btn-lg btn-success btn-block" type="submit" value="enviar" name="enviar">
+                                    <input class="btn btn-lg btn-success btn-block" type="submit" value="Salir" name="salir">
                                 </fieldset>
                                 </form>
                             </div>

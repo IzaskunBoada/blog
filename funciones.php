@@ -1,4 +1,17 @@
 <?php
+function conexionTotal()
+{
+	require_once("conexion.php");
+	$dwes = Conectar();
+		if($dwes != null)
+		{
+			return $dwes;
+		}
+		else
+		{
+			return 0;
+		}
+}
 function sacarUsuario($nombre, $password){
 	require_once("conexion.php");
 	$dwes = Conectar();
@@ -22,6 +35,32 @@ function sacarUsuario($nombre, $password){
 			return 0;
 		}
 		Desconectar($dwes);
+	}
+	else
+	{
+		return 0;
+	}
+}
+function sacarNombreUsuario($codigo){
+	require_once("conexion.php");
+	$dwes = Conectar();
+	if($dwes != null)
+	{
+		$sql = "SELECT Nombre FROM Usuario WHERE id_usuario = '$codigo'";
+		$result = $dwes->query($sql);
+		if($result)
+		{
+			$row = $result->fetch_assoc();
+			return $row['Nombre'];
+		}
+		else
+		{
+			return "administrador";
+		}
+	}
+	else
+	{
+		return 0;
 	}
 }
 ?>

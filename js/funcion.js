@@ -1,10 +1,10 @@
-window.onload = function(){
-	document.getElementyById('botonlogin').onclick = encriptar;
-}
-function encriptar()
+window.onload = function()
 {
-	var pass = document.form_login.password.value;
-	var hash = hex_md5(pass);
-	document.form_login.password.value=hash;
-	document.form_login.submit();
+	document.getElementById('ventana_agregar_post').onClick = ads;
+	function asd(){
+		alert('hldsad');
+	}
 }
+function asf(){
+ 	alert('asd');
+ }

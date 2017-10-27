@@ -2,5 +2,5 @@
 $localhost = "localhost";
 $password = "root";
 $usuario = "admin";
-$db = "prueba1";
+$db = "blog";
 ?>
