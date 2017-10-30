@@ -5,4 +5,10 @@ $(document).ready(function(){
 	$('#ventana_agregar_post').click(function(event){
 		$("#div_dinamico_admin").load('ventanacrearpost.php');
 	});
+	$('#crear_post').click(function(event){
+		$("#div_dinamico_admin").load('crearpost.php');
+	});
+	$('#crear_post_atras').click(function(event){
+		$("#div_dinamico_admin").load('mostrarpostadmin.php');
+	})
 });
