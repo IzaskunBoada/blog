@@ -1,7 +1,8 @@
 <?php
 function Conectar()
 {
-	require_once("datos.php");
+	//require_once("datos.php");
+	include("datos.php");
 	$dwes = new mysqli();
 	$dwes->connect("$localhost","$password","$usuario","$db");
 	$error = $dwes->connect_errno;
@@ -18,6 +19,7 @@ function Conectar()
 
 function Desconectar($dwes){
 	$dwes->close();
+	return null;
 }
 
 ?>

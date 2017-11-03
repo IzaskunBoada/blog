@@ -27,7 +27,7 @@ if($id_usuario != null || $titulo != null || $imagen != null || $texto != null |
 {
 	require_once("funciones.php");
 	$dwes = ConexionTotal();
-	if($dwes == 0)
+	if(!$dwes)
 	{
 		echo "Error 1";
 	}
@@ -37,7 +37,8 @@ if($id_usuario != null || $titulo != null || $imagen != null || $texto != null |
 		$result = $dwes->query($sql);
 		if($result)
 		{
-			echo "Guardado";
+			echo "<script type='text/javascript'>alert('Guardado');</script>";
+			header('Location admin.php');
 		}
 		else
 		{

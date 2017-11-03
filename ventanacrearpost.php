@@ -3,6 +3,9 @@
 ?>
 <script src="ckeditor/ckeditor.js"></script>
 <script src="js/funcion.js" type="text/javascript"></script>
+<script>
+	CKEDITOR.replace('editor1');
+</script>
 <br><br>
 <form action="crearpost.php" method="post" accept-charset="utf-8">
 	<h2>Crear Post</h2>
@@ -12,7 +15,7 @@
 	<?php
 		include("mostrarcategorias.php");
     ?>
-	<textarea name="editor1"></textarea>
+	<textarea class="" name="editor1"></textarea>
 	<input type="submit" id="crear_post" value="Añadir">
 	<input type="button" id="crear_post_atras" value="Cancelar">
 </form>

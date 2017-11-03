@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 if(isset($_SESSION['usuario']))
 {
   include("funciones.php");
@@ -18,27 +18,23 @@ if(isset($_SESSION['usuario']))
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
+              <!--CABECERA DE ADMINISTRADOR-->
               <span style="color:red;">Bienvenido Señor:
               <?php
                 echo $Nombre;
               ?>
               </span>
               <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Inicio
-                      <span class="sr-only">(current)</span>
+                <ul class="navbar-nav ml-auto" id="ul_inicio">
+                  <li id="inicio" class="nav-item active">
+                    <a class="nav-link" href="admin.php">Post
+                     
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#" id="mostrar_post">Post</a>
+                  <li class="nav-item" id="nosotros">
+                    <a class="nav-link" href="#" id="mostrar_post">Comentarios</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Servicios</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
-                  </li>
+                  
                 </ul>
                 <li class="nav-item">
                   <a class="nav-link" href="index.php"><input type="submit" value="Cerrar Sesión" id="cerrarsesion"></a>
@@ -72,21 +68,20 @@ else
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
+              <!--CABECERA DE USUARIO-->
               <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Inicio
-                      <span class="sr-only">(current)</span>
-                    </a>
+                <ul class="navbar-nav ml-auto" id="ul_inicio">
+                  <li class="nav-item active" id="inicio">
+                    <a class="nav-link" href="index.php">Inicio</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Sobre nosotros</a>
+                  <li class="nav-item" id="nosotros">
+                    <a class="nav-link" href="nosotros.php">Sobre nosotros</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Servicios</a>
+                  <li class="nav-item" id="post">
+                    <a class="nav-link" href="post.php">Post</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
+                  <li class="nav-item" id="contacto">
+                    <a class="nav-link" href="contacto.php">Contacto</a>
                   </li>
                 </ul>
                 <li class="nav-item">

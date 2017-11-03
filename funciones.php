@@ -3,7 +3,7 @@ function conexionTotal()
 {
 	require_once("conexion.php");
 	$dwes = Conectar();
-		if($dwes != null)
+		if($dwes)
 		{
 			return $dwes;
 		}
@@ -11,6 +11,12 @@ function conexionTotal()
 		{
 			return 0;
 		}
+}
+function desconexionTotal($dwes)
+{
+	require_once("conexion.php");
+	$opc = Desconectar($dwes);
+	return null;
 }
 function sacarUsuario($nombre, $password){
 	require_once("conexion.php");

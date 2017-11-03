@@ -23,5 +23,6 @@ else
     echo"<option value='inexistente'>-----</option>";
   }
 }
+$dwes = desconexionTotal($dwes);
 echo "<select>";
 ?>

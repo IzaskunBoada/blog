@@ -31,6 +31,7 @@ if(isset($_SESSION['usuario']))
         <div class="container" id="div_dinamico_admin">
           <br><br><br>
           <!-- /.row -->
+          <p> Menu de 2 opciones, Post, Comentarios y el boton de cerrar sesion</p>
         </div>
         <?php 
           require_once("footer.php");
