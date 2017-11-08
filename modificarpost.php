@@ -4,6 +4,11 @@ if(isset($_SESSION['usuario']))
 {
 	$id_usuario = $_SESSION['usuario'];
 }
+if(isset($_SESSION['id_post']))
+{
+	$id_post = $_SESSION['id_post'];
+}
+unset($_SESSION['id_post']);
 if(isset($_POST["titulo"]))
 {
 	$titulo = $_POST["titulo"];
@@ -15,6 +20,10 @@ if(isset($_POST["titulo"]))
 if(isset($_POST['archivo']))
 {
 	$imagen = $_POST['archivo'];
+	if(empty($imagen))
+	{
+		$imagen = null;
+	}
 }
 if(isset($_POST['editor1']))
 {
@@ -33,6 +42,7 @@ if(isset($_POST['categoria']))
 	}
 }
 $fecha=strftime( "%Y-%m-%d",time());
+
 if($id_usuario != null && $titulo != null && $texto != null && $id_categoria != null && $fecha != null)
 {
 	require_once("funciones.php");
@@ -40,25 +50,32 @@ if($id_usuario != null && $titulo != null && $texto != null && $id_categoria != 
 	if(!$dwes)
 	{
 		echo "<script type='text/javascript'>
-					alert('Conexion fallida.');
-					window.location.href='admin.php';
-			</script>";
+				alert('Conexion fallida.');
+				window.location.href='admin.php';
+		</script>";
 	}
 	else
 	{
-		$sql = "INSERT INTO Post (id_post, id_usuario, fecha, titulo, imagen, texto, id_categoria) VALUES (null,'$id_usuario','$fecha','$titulo','$imagen','$texto','$id_categoria')";
+		if($id_usuario == null)
+		{
+			$sql = "UPDATE Post SET id_usuario = '$id_usuario', fecha = '$fecha', titulo='$titulo', texto='$texto', id_categoria='$id_categoria' WHERE id_post = '$id_post'";
+		}
+		else
+		{
+			$sql = "UPDATE Post SET id_usuario = '$id_usuario', fecha = '$fecha', titulo='$titulo', texto='$texto', id_categoria='$id_categoria', imagen='$imagen' WHERE id_post = '$id_post'";
+		}
 		$result = $dwes->query($sql);
 		if($result)
 		{
 			echo "<script type='text/javascript'>
-					alert('Se ha guardado satisfactoriamente.');
+					alert('Se ha modificado satisfactoriamente.');
 					window.location.href='admin.php';
 			</script>";
 		}
 		else
 		{
 			echo "<script type='text/javascript'>
-					alert('No se ha guardado con exito.');
+					alert('No se ha modificado con exito.');
 					window.location.href='admin.php';
 			</script>";
 		}
