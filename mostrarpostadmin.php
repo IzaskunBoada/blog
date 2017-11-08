@@ -1,3 +1,6 @@
+
+
+
 <?php 
   require_once("funciones.php");
 ?>
@@ -6,7 +9,7 @@
   <fieldset class='m-md-2'>
     <table style='width: 100%;' cellpadding='5'>
       <tr>  
-        <td align='left'><label><b style='font-size: 22px'>Post</b></label></td>
+        <td align='left'><label><b style='font-size: 22px'>Administrador de   Post</b></label></td>
           <td align='right'>
             <label>Categorias:</label>
             <?php
@@ -22,3 +25,4 @@
         ?>
   </fieldset>
 </form>
+

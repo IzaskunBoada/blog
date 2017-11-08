@@ -1,3 +1,6 @@
+
+
+
 <?php 
 $id = substr($_SERVER["REQUEST_URI"], strpos($_SERVER["REQUEST_URI"],"?id=")+4);
 if(empty($id))
