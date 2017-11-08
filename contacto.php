@@ -40,24 +40,19 @@
     <div class="container">
       <br>
       <div class="row">
-        <!-- Blog Entries Column -->
-        <div class="col-md-8">
-          <h1 class="my-4">JILD<br>
-            <small>Titulo</small>
+        <!-- Blog Entries Column 
+        
+          <h1 class="my-4">FORMULARIO DE CONTACTO<br>-->
+            
           </h1>
           <!-- Blog Post -->
-          <div class="card mb-4">
-            <img class="card-img-top" src="img/logo.gif" alt="Card image cap">
-            <div class="card-body">
-              <h2 class="card-title">Un poco de informacion sobre nosotros</h2>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-              <a href="#" class="btn btn-primary">Read More &rarr;</a>
-            </div>
-          </div>
-          <!-- Pagination -->
-          
-        </div>
-        <!-- Sidebar Widgets Column -->
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeCSf1DBt7RyirwJEg2dNXvJQdLNt_neR_-1XqOzDITFisoUw/viewform?embedded=true" style="width:100%; height:1120px;"/> 
+           
+            
+              
+
+          </iframe>
+          </div>        
         
       </div>
       <!-- /.row -->

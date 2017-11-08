@@ -1,4 +1,5 @@
 <?php
+echo "<br><br><br><br>";
 session_start();
 if(isset($_SESSION['usuario']))
 {
@@ -7,10 +8,6 @@ if(isset($_SESSION['usuario']))
 if(isset($_POST["titulo"]))
 {
 	$titulo = $_POST["titulo"];
-	if(empty($titulo))
-	{
-		$titulo = null;
-	}
 }
 if(isset($_POST['archivo']))
 {
@@ -19,30 +16,20 @@ if(isset($_POST['archivo']))
 if(isset($_POST['editor1']))
 {
 	$texto = $_POST['editor1'];
-	if(empty($texto))
-	{
-		$texto = null;
-	}
 }
 if(isset($_POST['categoria']))
 {
 	$id_categoria = $_POST['categoria'];
-	if(empty($id_categoria))
-	{
-		$id_categoria = null;
-	}
 }
 $fecha=strftime( "%Y-%m-%d",time());
-if($id_usuario != null && $titulo != null && $texto != null && $id_categoria != null && $fecha != null)
+//A-PARTIR-DE-AQUI-COMPROBAR-QUE-INSERTE
+if($id_usuario != null || $titulo != null || $imagen != null || $texto != null || $id_categoria != null || $fecha != null)
 {
 	require_once("funciones.php");
 	$dwes = ConexionTotal();
 	if(!$dwes)
 	{
-		echo "<script type='text/javascript'>
-					alert('Conexion fallida.');
-					window.location.href='admin.php';
-			</script>";
+		echo "Error 1";
 	}
 	else
 	{
@@ -50,25 +37,17 @@ if($id_usuario != null && $titulo != null && $texto != null && $id_categoria != 
 		$result = $dwes->query($sql);
 		if($result)
 		{
-			echo "<script type='text/javascript'>
-					alert('Se ha guardado satisfactoriamente.');
-					window.location.href='admin.php';
-			</script>";
+			echo "<script type='text/javascript'>alert('Guardado');</script>";
+			header('Location admin.php');
 		}
 		else
 		{
-			echo "<script type='text/javascript'>
-					alert('No se ha guardado con exito.');
-					window.location.href='admin.php';
-			</script>";
+			echo "Error 2";
 		}
 	}
 }
 else
 {
-	echo "<script type='text/javascript'>
-			alert('Error: No se han introducido los suficientes datos para crear un post.');
-			window.location.href='admin.php';
-	</script>";
+	echo "Error 3";
 }
 ?>

@@ -15,7 +15,7 @@
 	<?php
 		include("mostrarcategorias.php");
     ?>
-	<textarea class="form-control" name="editor1"></textarea>
+	<textarea class="" name="editor1"></textarea>
 	<input type="submit" id="crear_post" value="Añadir">
 	<input type="button" id="crear_post_atras" value="Cancelar">
 </form>

@@ -13,6 +13,7 @@ function Conectar()
 	}
 	else
 	{
+		$dwes->query("set names 'utf8'");
 		return $dwes;
 	}
 }

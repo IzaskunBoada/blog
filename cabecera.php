@@ -19,7 +19,7 @@ if(isset($_SESSION['usuario']))
                 <span class="navbar-toggler-icon"></span>
               </button>
               <!--CABECERA DE ADMINISTRADOR-->
-              <span style="color:red;">Bienvenido Señor:
+              <span style="color:red;">Bienvenido/a Señor/a:
               <?php
                 echo $Nombre;
               ?>
@@ -27,12 +27,12 @@ if(isset($_SESSION['usuario']))
               <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto" id="ul_inicio">
                   <li id="inicio" class="nav-item active">
-                    <a class="nav-link" href="admin.php">Post
+                    <a class="nav-link" href="admin.php">Administrador de Post
                      
                     </a>
                   </li>
                   <li class="nav-item" id="nosotros">
-                    <a class="nav-link" href="#" id="mostrar_post">Comentarios</a>
+                    <a class="nav-link" href="#" id="mostrar_post">Administrador de Comentarios</a>
                   </li>
                   
                 </ul>
@@ -76,9 +76,6 @@ else
                   </li>
                   <li class="nav-item" id="nosotros">
                     <a class="nav-link" href="nosotros.php">Sobre nosotros</a>
-                  </li>
-                  <li class="nav-item" id="post">
-                    <a class="nav-link" href="post.php">Post</a>
                   </li>
                   <li class="nav-item" id="contacto">
                     <a class="nav-link" href="contacto.php">Contacto</a>
