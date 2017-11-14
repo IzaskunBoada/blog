@@ -47,11 +47,22 @@
           </h1>
           <!-- Blog Post -->
           <div class="card mb-4">
-            <img class="imgNosotros" src="img/logoNosotros.png" alt="Card image cap">
+            <!-- MODIFICADO -->
+            <img class="imgNosotros" src="img/logoNosotros.png" alt="Card image cap" width="350" height="350">
             <div class="card-body">
-              <h2 class="card-title">Un poco de informacion sobre nosotros</h2>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-              <a href="#" class="btn btn-primary">Read More &rarr;</a>
+              <h2 class="card-title">Descripcion de la Empresa</h2>
+              <p class="card-text">JILD es una empresa fundada por 4 miembros fundada en el año 2017 cuyo ambito principal se centra en la realizacion de tutoriales y resolucion de problemas.</p><br>
+
+              <h2 class="card-text">Localizacion</h2>
+              <p class="card-text">La empresa está situada en Bilbao, Ornilla Doctor Kalea, 2<br>
+                El teléfono de la empresa es el siguiente: +34 944 12 57 12<br>
+                Nuestro horario es de 8:00 a 2:30</p><br>
+
+              <h2 class="card-text">Contacto</h2>
+              <p class="card-text"> Para cualquier tipo de consulta podeis escribirnos un mail a jildgrupo1@gmail.com o rellenar el formulario que os dejamos a continuacion. <a href="contacto.php">Contacto</a></p>
+              
+              <iframe class="googlemap" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11622.797473629109!2d-2.9027771!3d43.2577221!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x328cb72d75d5411c!2sCIFP+Txurdinaga+LHII!5e0!3m2!1ses!2ses!4v1510572190777" width="425" height="350" frameborder="0" style="border:0" allowfullscreen></iframe><br>
+            <!-- MODIFICADO -->
             </div>
           </div>
           <!-- Pagination -->
